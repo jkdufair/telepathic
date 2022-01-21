@@ -1,0 +1,275 @@
+body, input, button, select, option, textarea {
+  font-family: Helvetica, Arial, sans-serif;
+}
+body {
+  font-size: 15px;
+}
+input, select, option, textarea {
+  font-size: 100%;
+}
+
+button { font-size: 200%; }
+
+#instructions  { font-size: 30px; text-align: center; margin-top: 20px; }
+
+#upper-area { min-height: 60px; }
+
+#upper-area > div { min-height: 30px; }
+
+#condition-cards img { width: 150px; margin-right: 5px; margin-left: 5px; }
+
+.card-image { width: 150px; height: 150px; }
+.card-image:hover { background-color: lightgreen; }
+
+#action-cards {
+	margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.action-card { margin: 4px; margin-left: 25px; margin-right: 25px; align-self: center; }
+
+.selected-action-card { border: 2px solid red; align-self: center; }
+
+.non-selected-action-card { opacity: 0.5; }
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.condition-front {
+	display: none;
+}
+
+.condition-card:hover .condition-front {
+	display: block;
+}
+
+.condition-card:hover .condition-back {
+	display: none;
+}
+
+.highlight { background-color: lightyellow; }
+
+td > img {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+@keyframes down-one {
+  from {
+		top: 0;
+  }
+  to {
+    top: 157px;
+  }
+}
+
+@keyframes down-one-arc {
+	0% { top: 0; left: 0; animation-timing-function: ease-in;}
+	25% { top: 39px; left: 40px; animation-timing-function: linear;}
+	50% { top: 78px; left: 50px; animation-timing-function: linear;}
+	75% { top: 117px; left: 40px; animation-timing-function: linear;}
+	100% { top: 157px; left: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes down-one-arc-widdershins {
+	0% { top: 0; left: 0; animation-timing-function: ease-in;}
+	25% { top: 39px; left: -40px; animation-timing-function: linear;}
+	50% { top: 78px; left: -50px; animation-timing-function: linear;}
+	75% { top: 117px; left: -40px; animation-timing-function: linear;}
+	100% { top: 157px; left: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes down-two {
+	from {
+		top: 0;
+	}
+	to {
+		top: 314px;
+	}
+}
+
+@keyframes down-three-arc {
+	0% { top: 0; left: 0; animation-timing-function: ease-in;}
+	25% { top: 118px; left: 80px; animation-timing-function: linear;}
+	50% { top: 236px; left: 100px; animation-timing-function: linear;}
+	75% { top: 354px; left: 80px; animation-timing-function: linear;}
+	100% { top: 471px; left: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes up-one {
+  from {
+		top: 0;
+  }
+  to {
+    top: -157px;
+  }
+}
+
+@keyframes up-one-arc {
+	0% { top: 0; left: 0; animation-timing-function: ease-in;}
+	25% { top: -39px; left: -40px; animation-timing-function: linear;}
+	50% { top: -78px; left: -50px; animation-timing-function: linear;}
+	75% { top: -117px; left: -40px; animation-timing-function: linear;}
+	100% { top: -157px; left: 0; animation-timing-function: ease-out;}
+}
+@keyframes up-one-arc-widdershins {
+	0% { top: 0; left: 0; animation-timing-function: ease-in;}
+	25% { top: -39px; left: 40px; animation-timing-function: linear;}
+	50% { top: -78px; left: 50px; animation-timing-function: linear;}
+	75% { top: -117px; left: 40px; animation-timing-function: linear;}
+	100% { top: -157px; left: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes up-three-arc {
+	0% { top: 0; left: 0; animation-timing-function: ease-in;}
+	25% { top: -118px; left: -80px; animation-timing-function: linear;}
+	50% { top: -236px; left: -100px; animation-timing-function: linear;}
+	75% { top: -354px; left: -80px; animation-timing-function: linear;}
+	100% { top: -471px; left: 0; animation-timing-function: ease-out;}
+}
+
+
+@keyframes right-one {
+  from {
+		left: 0;
+  }
+  to {
+    left: 157px;
+  }
+}
+
+@keyframes right-one-arc {
+	0% { left: 0; top: 0; animation-timing-function: ease-in;}
+	25% { left: 39px; top: -40px; animation-timing-function: linear;}
+	50% { left: 78px; top: -50px; animation-timing-function: linear;}
+	75% { left: 117px; top: -40px; animation-timing-function: linear;}
+	100% { left: 157px; top: 0; animation-timing-function: ease-out;}
+}
+ @keyframes right-one-arc-widdershins {
+	0% { left: 0; top: 0; animation-timing-function: ease-in;}
+	25% { left: 39px; top: 40px; animation-timing-function: linear;}
+	50% { left: 78px; top: 50px; animation-timing-function: linear;}
+	75% { left: 117px; top: 40px; animation-timing-function: linear;}
+	100% { left: 157px; top: 0; animation-timing-function: ease-out;}
+}
+
+
+@keyframes left-one {
+  from {
+		left: 0;
+  }
+  to {
+    left: -157px;
+  }
+}
+
+@keyframes left-one-arc {
+	0% { left: 0; top: 0; animation-timing-function: ease-in;}
+	25% { left: -39px; top: 40px; animation-timing-function: linear;}
+	50% { left: -78px; top: 50px; animation-timing-function: linear;}
+	75% { left: -117px; top: 40px; animation-timing-function: linear;}
+	100% { left: -157px; top: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes left-one-arc-widdershins {
+	0% { left: 0; top: 0; animation-timing-function: ease-in;}
+	25% { left: -39px; top: -40px; animation-timing-function: linear;}
+	50% { left: -78px; top: -50px; animation-timing-function: linear;}
+	75% { left: -117px; top: -40px; animation-timing-function: linear;}
+	100% { left: -157px; top: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes left-three-arc {
+	0% { left: 0; top: 0; animation-timing-function: ease-in;}
+	25% { left: -118px; top: 80px; animation-timing-function: linear;}
+	50% { left: -236px; top: 100px; animation-timing-function: linear;}
+	75% { left: -354px; top: 80px; animation-timing-function: linear;}
+	100% { left: -471px; top: 0; animation-timing-function: ease-out;}
+}
+
+@keyframes right-three-arc {
+	0% { left: 0; top: 0; animation-timing-function: ease-in;}
+	25% { left: 118px; top: -80px; animation-timing-function: linear;}
+	50% { left: 236px; top: -100px; animation-timing-function: linear;}
+	75% { left: 354px; top: -80px; animation-timing-function: linear;}
+	100% { left: 471px; top: 0; animation-timing-function: ease-out;}
+}
+
+.animate {
+  animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.animate-down-one {
+	animation-name: down-one;
+}
+
+.animate-down-one-arc {
+  animation-name: down-one-arc;
+}
+
+.animate-down-one-arc-widdershins {
+  animation-name: down-one-arc-widdershins;
+}
+
+.animate-down-two {
+	animation-name: down-two;
+}
+
+.animate-down-three-arc {
+	animation-name: down-three-arc;
+}
+
+.animate-up-one {
+  animation-name: up-one;
+}
+
+.animate-up-one-arc {
+  animation-name: up-one-arc;
+}
+
+.animate-up-one-arc-widdershins {
+  animation-name: up-one-arc-widdershins;
+}
+
+.animate-up-three-arc {
+	animation-name: up-three-arc;
+}
+
+.animate-right-one {
+  animation-name: right-one;
+}
+
+.animate-right-one-arc {
+	animation-name: right-one-arc;
+}
+
+.animate-right-one-arc-widdershins {
+	animation-name: right-one-arc-widdershins;
+}
+
+.animate-left-one {
+  animation-name: left-one;
+}
+
+.animate-left-one-arc {
+	animation-name: left-one-arc;
+}
+
+.animate-left-one-arc-widdershins {
+	animation-name: left-one-arc-widdershins;
+}
+
+.animate-left-three-arc {
+  animation-name: left-three-arc;
+}
+
+.animate-right-three-arc {
+  animation-name: right-three-arc;
+}
