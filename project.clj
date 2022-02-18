@@ -12,8 +12,8 @@
                  [expound "0.8.10"]
                  [funcool/struct "1.4.0"]
                  [json-html "0.4.7"]
+                 [luminus-immutant "0.2.5"]
                  [luminus-transit "0.1.3"]
-                 [luminus-undertow "0.1.14"]
                  [luminus/ring-ttl-session "0.3.3"]
                  [markdown-clj "1.10.7"]
                  [metosin/muuntaja "0.6.8"]
@@ -35,7 +35,8 @@
                  [ring/ring-core "1.9.4"]
                  [ring/ring-defaults "0.3.3"]
                  [selmer "1.12.45"]
-                 [thheller/shadow-cljs "2.16.7" :scope "provided"]]
+                 [thheller/shadow-cljs "2.16.7" :scope "provided"]
+                 [com.taoensso/sente "1.16.2"]]
 
   :min-lein-version "2.0.0"
   
