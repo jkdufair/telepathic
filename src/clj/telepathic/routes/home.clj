@@ -30,6 +30,5 @@
    ["/docs" {:get (fn [_]
                     (-> (response/ok (-> "docs/docs.md" io/resource slurp))
                         (response/header "Content-Type" "text/plain; charset=utf-8")))}]
-   ["/chsk" {:get (fn [req] (ring-ajax-get-or-ws-handshake req))}]
-   ["/chsk" {:post (fn [req] (ring-ajax-post req))}]])
-
+   ["/chsk" {:get (fn [req] (ring-ajax-get-or-ws-handshake req))
+						 :post (fn [req] (ring-ajax-post req))}]])
